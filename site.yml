@@ -1,0 +1,29 @@
+---
+- name: State machine test
+  hosts: localhost
+  connection: local
+  gather_facts: True
+  vars:
+    plan_id_options:
+      - prod
+      - dev
+    ha_options:
+      - True
+      - False
+    upgrade_options:
+      - True
+      - False
+  tasks:
+    - include_role:
+        name: state
+      vars:
+        _apb_plan_id: "{{ item[0] }}"
+        ha: "{{ item[1] }}"
+        upgrade: "{{ item[2] }}"
+      with_nested:
+        - "{{ plan_id_options }}"
+        - "{{ ha_options }}"
+        - "{{ upgrade_options }}"
+
+
+

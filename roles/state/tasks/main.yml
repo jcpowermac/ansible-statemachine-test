@@ -1,0 +1,15 @@
+---
+
+- debug:
+    msg:
+      - "Enter main: "
+      - " Plan: {{ _apb_plan_id }}"
+      - " HA: {{ ha }}"
+      - " Upgrade: {{ upgrade }}"
+
+
+#- include_tasks: "{{ states[current_state] }}.yml"
+
+
+- include_tasks: "{{ plan_states[_apb_plan_id][ha] }}.yml"
+

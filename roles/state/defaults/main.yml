@@ -1,0 +1,18 @@
+
+current_state: "{{ _apb_plan_id }}{{ ha }}"
+
+states:
+  prodTrue: "prod-ha"
+  prodFalse: "prod"
+  devTrue: "dev-ha"
+  devFalse: "dev"
+
+
+plan_states:
+  dev:
+    True: "dev-ha"
+    False: "dev"
+  prod:
+    True: "prod-ha"
+    False: "prod"
+
