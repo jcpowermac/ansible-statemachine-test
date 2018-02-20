@@ -1,0 +1,11 @@
+---
+
+- debug:
+    msg:
+      - "Wait for MariaDB"
+      - "Find pod we need to restore"
+      - "Copy over DB"
+      - "Restore"
+      - "Remove Old DC"
+      - "Ensure PV is absent"
+

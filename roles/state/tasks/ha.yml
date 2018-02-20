@@ -1,0 +1,10 @@
+---
+
+- debug:
+    msg:
+      - "Create HA Service"
+      - "Create ImageStream"
+      - "Create BuildConfig"
+      - "Create StatefulSet"
+      - "Wait For Deployment"
+

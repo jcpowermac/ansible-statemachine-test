@@ -1,4 +1,14 @@
 ---
 
+- include_tasks: "update_step_a.yml"
+  when: update
+
+- include_tasks: "service.yml"
+
 - debug:
-    msg: "dev"
+    msg:
+      - "Create DeploymentConfig"
+
+- include_tasks: "update_step_b.yml"
+  when: update
+

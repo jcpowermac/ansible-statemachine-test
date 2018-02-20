@@ -10,7 +10,10 @@
     ha_options:
       - True
       - False
-    upgrade_options:
+    update_options:
+      - True
+      - False
+    test_options:
       - True
       - False
   tasks:
@@ -19,11 +22,13 @@
       vars:
         _apb_plan_id: "{{ item[0] }}"
         ha: "{{ item[1] }}"
-        upgrade: "{{ item[2] }}"
+        update: "{{ item[2] }}"
+        test: "{{ item[3] }}"
       with_nested:
         - "{{ plan_id_options }}"
         - "{{ ha_options }}"
-        - "{{ upgrade_options }}"
+        - "{{ update_options }}"
+        - "{{ test_options }}"
 
 
 

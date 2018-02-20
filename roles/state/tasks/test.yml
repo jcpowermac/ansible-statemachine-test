@@ -1,4 +1,9 @@
 ---
 
 - debug:
-    msg: "test"
+    msg:
+      - "Create Database Tables"
+      - "Create Data"
+      - "Select Data"
+      - "Confirm Galera Operation"
+      - "Check Expected Results"

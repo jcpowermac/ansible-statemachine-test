@@ -1,0 +1,9 @@
+---
+
+- debug:
+    msg:
+      - "Find Pod"
+      - "Find DC"
+      - "Backup database"
+      - "Copy Database"
+
